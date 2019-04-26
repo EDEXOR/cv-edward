@@ -81,6 +81,14 @@
     </div>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>
+      window.addEventListener('load', hola, false);
+function hola() {
+swal("Puedes ganarte que te invite a comer , Pero tienes que pasar todos los retos ;)")
+.then((value) => {
+  swal(`Tienes que pasar los 5 niveles de este juego para pasar a la siguiente fase , debes de dar clic a los colores que el juego te marca ${value}`);
+});
+}
+      
       const celeste = document.getElementById('celeste')
       const violeta = document.getElementById('violeta')
       const naranja = document.getElementById('naranja')
@@ -220,15 +228,20 @@
            }
         }
         ganoElJuego(){
-            swal('Sos bien paloma','Escribime al dm "TENGO HAMBRE, GANE" y te invito a comer xd ','success')
-            .then(this.inicializar)
+            swal('Sos bien paloma','Pasas a la siguiente fase','success')
+            .then(() =>{
+                    this.eliminarEventosClick()
+                    window.location="fase2.html";
+                })
+            
         }
 
         perdioElJuego(){
             swal('Ni modo :c','seguilo intentando','error')
             .then(() =>{
                     this.eliminarEventosClick()
-                this.inicializar()
+                    location.reload();
+                    
                 })
         }
     
