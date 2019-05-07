@@ -21,7 +21,7 @@ swal("Para seguir tienes que decirme que color es este", {
 .then((value) => {
   if (value=="#475191" || value=="475191") {
     swal(`lol: ${value}`);
-    window.location="4ase4/lol.html";
+    window.location="4ase4/";
   }
   else{
     swal(`Lo siento pero no es ese el color xd : ${value}`);
@@ -34,4 +34,7 @@ swal("Para seguir tienes que decirme que color es este", {
     swal("Lo siento", "no es el color que tienes que conocer", "error");
     
   }
+}
+function contar(){
+  
 }
